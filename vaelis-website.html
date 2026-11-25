@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a2a">
+  <meta name="description" content="Vaelis — writer, worldbuilder, and lover of stories and original characters.">
+  <title>Vaelis | Stories Beyond the Stars</title>
+  <style>
+    :root {
+      --night: #101827; --deep: #17243a; --panel: rgba(28, 43, 66, .78);
+      --lavender: #c9b8ff; --aqua: #9ce8e6; --white: #f4f3ff;
+      --muted: #b8c2d6; --line: rgba(201,184,255,.22);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--white); background:
+        radial-gradient(ellipse at 15% 5%, rgba(104,93,175,.27), transparent 35%),
+        radial-gradient(ellipse at 85% 28%, rgba(67,160,171,.17), transparent 32%),
+        linear-gradient(155deg, #0c1422, #17233a 55%, #101827);
+      font-family: Georgia, "Times New Roman", serif; line-height: 1.65;
+    }
+    a { color: var(--aqua); text-decoration: none; }
+    a:hover { color: var(--lavender); }
+    .stars { position: fixed; inset: 0; pointer-events: none; opacity: .42; z-index: -1;
+      background-image: radial-gradient(1px 1px at 10% 20%, white 98%, transparent),
+      radial-gradient(1px 1px at 70% 15%, white 98%, transparent),
+      radial-gradient(2px 2px at 42% 63%, #c9b8ff 98%, transparent),
+      radial-gradient(1px 1px at 88% 78%, white 98%, transparent),
+      radial-gradient(1px 1px at 23% 88%, #9ce8e6 98%, transparent);
+      background-size: 310px 260px; }
+    .wrap { width: min(1080px, calc(100% - 40px)); margin: auto; }
+    header { padding: 22px 0; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { letter-spacing:.18em; text-transform:uppercase; color:var(--lavender); font: 700 13px Arial,sans-serif; }
+    nav { display:flex; gap:24px; flex-wrap:wrap; font: 13px Arial,sans-serif; }
+    nav a { color:var(--muted); }
+    .hero { min-height: 570px; display:grid; place-items:center; text-align:center; padding:80px 0 100px; }
+    .orb { width:84px; height:84px; margin:0 auto 25px; border-radius:50%;
+      background: radial-gradient(circle at 35% 30%, #f1efff, #c9b8ff 26%, #7a77ba 58%, #283b57 76%);
+      box-shadow: 0 0 55px rgba(174,159,255,.4), 0 0 110px rgba(104,205,211,.16); }
+    .eyebrow { color:var(--aqua); letter-spacing:.22em; text-transform:uppercase; font:12px Arial,sans-serif; }
+    h1 { font-size:clamp(58px, 11vw, 112px); line-height:.98; margin:15px 0; font-weight:400; letter-spacing:-.045em; }
+    .hero p { max-width:620px; margin:22px auto 30px; color:var(--muted); font-size:19px; }
+    .button { display:inline-block; padding:12px 22px; border:1px solid var(--line); border-radius:999px;
+      background:rgba(201,184,255,.1); color:var(--white); font:13px Arial,sans-serif; letter-spacing:.05em; }
+    .button:hover { background:rgba(156,232,230,.14); }
+    section { padding:66px 0; }
+    .section-kicker { color:var(--aqua); text-transform:uppercase; letter-spacing:.2em; font:11px Arial,sans-serif; }
+    h2 { font-size:clamp(32px,5vw,48px); font-weight:400; margin:8px 0 22px; }
+    .intro { max-width:720px; color:var(--muted); font-size:18px; }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:30px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:25px; backdrop-filter:blur(10px); }
+    .card .symbol { font-size:27px; }
+    h3 { font-size:22px; font-weight:400; margin:10px 0; }
+    .card p { color:var(--muted); margin:0; font-size:15px; }
+    .quote { margin:30px 0 0; padding:28px 30px; border-left:2px solid var(--aqua);
+      color:#e1def5; background:rgba(156,232,230,.055); font-size:21px; font-style:italic; }
+    .tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .tag { border:1px solid var(--line); color:var(--muted); padding:7px 13px; border-radius:99px; font:12px Arial,sans-serif; }
+    .contact { text-align:center; padding-bottom:95px; }
+    .contact p { color:var(--muted); max-width:570px; margin:0 auto 25px; }
+    footer { border-top:1px solid var(--line); padding:24px 0; color:#8996ad; font:12px Arial,sans-serif; text-align:center; }
+    @media (max-width:700px) {
+      header { align-items:flex-start; flex-direction:column; }
+      nav { gap:15px; }
+      .hero { min-height:490px; padding:65px 0 75px; }
+      .grid { grid-template-columns:1fr; }
+      section { padding:48px 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top">✦ Vaelis</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#worlds">Story worlds</a><a href="#pandora">Pandora</a><a href="#interests">Inspiration</a><a href="#connect">Connect</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <div class="orb" aria-hidden="true"></div>
+          <div class="eyebrow">A little corner of the cosmos</div>
+          <h1>Vaelis</h1>
+          <p>Writer, worldbuilder, and collector of stories. Somewhere between starlight, strange worlds, and characters who refuse to be forgotten.</p>
+          <a class="button" href="#about">Enter my universe ↓</a>
+          <img class="pandora-hero"
+            src="https://lumiere-a.akamaihd.net/v1/images/avatarsequels_fractalreef_lagoolookout_concept_8a38afa9.jpeg?region=1%2C0%2C1298%2C730"
+            alt="Pandora's ocean and rocky islands from official Avatar concept art">
+          <div class="credit">Pandora concept art · © 20th Century Studios / Disney</div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-kicker">✦ The storyteller</div>
+        <h2>Welcome, wanderer.</h2>
+        <p class="intro">Kaltxì! I'm Vaelis. I love storytelling, building original characters, and exploring imaginative worlds. This space is a home for creative ideas, character journeys, and the little sparks that turn into whole universes.</p>
+        <div class="quote">“Every character has a story. Every world has a thousand more waiting to be discovered.”</div>
+      </section>
+
+      <section id="worlds">
+        <div class="section-kicker">✦ Beyond the horizon</div>
+        <h2>Worlds I wander through</h2>
+        <div class="grid">
+          <article class="card"><div class="symbol">🐉</div><h3>Fantasy & tabletop</h3><p>Myth, magic, quests, unlikely companions, and the stories that unfold around the table.</p></article>
+          <article class="card"><div class="symbol">🌌</div><h3>Galaxies far away</h3><p>Big adventures, found-family energy, and the wonder of science-fiction worlds.</p></article>
+          <article class="card"><div class="symbol">🪼</div><h3>Original characters</h3><p>Character concepts, personal lore, relationships, and the details that make a fictional person feel real.</p></article>
+        </div>
+      </section>
+
+      <section id="pandora">
+        <div class="section-kicker">✦ A glimpse of Pandora</div>
+        <h2>Into the world of Avatar</h2>
+        <p class="intro">From the glowing oceans to the homes of the reef people, here's a little gallery celebrating the world created by James Cameron.</p>
+        <div class="gallery">
+          <figure>
+            <img loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/avatarsequels_fractalreef_seawallterraces_concept_4309ba18.jpeg?region=1%2C0%2C1298%2C730" alt="Bioluminescent waters and terraces on Pandora">
+            <figcaption>Seawall Terraces · Pandora concept art</figcaption>
+          </figure>
+          <figure>
+            <img loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/avatarsequels_fractalreefvillage_concept_copy_3ae69546.jpeg?region=1%2C0%2C1298%2C730" alt="Na'vi riders crossing the water near a forested island">
+            <figcaption>Pandoran Atolls · Pandora concept art</figcaption>
+          </figure>
+          <figure>
+            <img loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/avatarsequels_metkayina_concept_e5bfe6c0.jpeg?region=1%2C0%2C1298%2C730" alt="Metkayina village built over turquoise water">
+            <figcaption>Metkayina Village · Pandora concept art</figcaption>
+          </figure>
+          <figure>
+            <img loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/avatar_btsgallery_13_e5635521.jpeg?region=1%2C0%2C1298%2C730" alt="James Cameron with members of the Avatar creative team">
+            <figcaption>James Cameron and cast in the Avatar art room · behind the scenes</figcaption>
+          </figure>
+        </div>
+        <p class="credit">Images hosted by Disney / 20th Century Studios on the official Avatar website. Copyright remains with their respective owners.</p>
+      </section>
+
+      <section id="interests">
+        <div class="section-kicker">✦ Inspiration board</div>
+        <h2>Things that spark ideas</h2>
+        <p class="intro">A few of the universes and creative corners that inspire me. This list is always evolving.</p>
+        <div class="tags">
+          <span class="tag">Fantasy</span><span class="tag">Dungeons & Dragons</span>
+          <span class="tag">Baldur’s Gate 3</span><span class="tag">Avatar</span>
+          <span class="tag">Star Wars</span><span class="tag">Worldbuilding</span>
+          <span class="tag">Original characters</span><span class="tag">Creative writing</span>
+        </div>
+      </section>
+
+      <section class="contact" id="connect">
+        <div class="section-kicker">✦ Find me among the stars</div>
+        <h2>Let’s connect.</h2>
+        <p>Follow along for creative updates, character ideas, and more little glimpses into my worlds.</p>
+        <a class="button" href="https://bsky.app/profile/dreamofeywa.bsky.social" target="_blank" rel="noopener noreferrer">Visit my Bluesky ↗</a>
+      </section>
+    </main>
+    <footer>Made of stardust, stories & imagination · © <span id="year"></span> Vaelis</footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
